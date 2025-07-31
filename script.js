@@ -64,35 +64,8 @@ function fall(el, rect) {
     } else {
       el.style.transform = `translateY(${fallDistance}px) rotate(${rotation}deg)`;
       el.dataset.falling = "done";
-      makeDraggable(el);
     }
   }
 
   requestAnimationFrame(animate);
-}
-
-function makeDraggable(el) {
-  let isDragging = false;
-  let offsetX = 0;
-  let offsetY = 0;
-
-  el.addEventListener("mousedown", (e) => {
-    if (el.dataset.falling !== "done") return; // 落ち切っていない場合は無視
-    isDragging = true;
-    offsetX = e.clientX - el.offsetLeft;
-    offsetY = e.clientY - el.offsetTop;
-    el.style.cursor = "grabbing";
-  });
-
-  document.addEventListener("mousemove", (e) => {
-    if (isDragging) {
-      el.style.left = e.clientX - offsetX + "px";
-      el.style.top = e.clientY - offsetY + "px";
-    }
-  });
-
-  document.addEventListener("mouseup", () => {
-    isDragging = false;
-    el.style.cursor = "grab";
-  });
 }
