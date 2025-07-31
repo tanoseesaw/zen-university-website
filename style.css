@@ -69,6 +69,14 @@ footer {
   font-style: normal;
 }
 
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  font-weight: normal;
+  display: block;
+  margin-top: 5px;
+}
+
 .university-img {
   width: 600px;
   height: 400px;
