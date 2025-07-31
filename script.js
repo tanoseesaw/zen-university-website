@@ -5,7 +5,7 @@ setTimeout(() => {
   document.querySelectorAll("[data-delay]").forEach(el => {
     el.dataset.delayReady = "true";
   });
-}, 3000);
+}, 2000);
 
 document.addEventListener("mousemove", (e) => {
   elements.forEach((el) => {
