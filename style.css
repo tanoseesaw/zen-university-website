@@ -63,6 +63,13 @@ footer {
   right: 0;
 }
 
+.divider {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 102, 0.2); /* 薄いネイビーの線 */
+  margin: 40px auto;
+  width: 60%;
+}
+
 .custom-font {
   font-size: 32px;
   font-family: "Zen Antique Soft", serif;
