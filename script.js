@@ -9,7 +9,9 @@ setTimeout(() => {
 
 document.addEventListener("mousemove", (e) => {
   elements.forEach((el) => {
+    
     if (el.dataset.delay === "true" && el.dataset.delayReady !== "true") return;
+    
     if (!el.dataset.falling) {
       const rect = el.getBoundingClientRect();
 
