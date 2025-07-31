@@ -167,6 +167,7 @@ footer {
 
 .falling {
   position: absolute;
+  cursor: grab;
 }
 
 #fall-layer {
