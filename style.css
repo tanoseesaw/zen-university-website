@@ -51,6 +51,23 @@ ul li {
   margin: 10px 0;
 }
 
+.header-bar {
+  background-color: #000066;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 999;
+}
+
+.header-logo {
+  height: 40px;
+  width: auto;
+}
+
 footer {
   width: 100%;
   margin: 0;
