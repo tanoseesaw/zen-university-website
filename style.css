@@ -63,6 +63,12 @@ footer {
   right: 0;
 }
 
+.custom-font {
+  font-family: "Zen Antique Soft", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .university-img {
   width: 600px;
   height: 400px;
