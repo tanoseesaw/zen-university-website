@@ -94,6 +94,7 @@ footer {
   font-size: 12px;
   position: relative;
   z-index: 0;
+  overflow: visible;
 }
 
 .divider {
