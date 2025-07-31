@@ -69,3 +69,13 @@ function fall(el, rect) {
 
   requestAnimationFrame(animate);
 }
+
+window.addEventListener("load", () => {
+  const header = document.getElementById("main-header");
+  const rect = header.getBoundingClientRect();
+
+  // 3秒後に落下
+  setTimeout(() => {
+    fall(header, rect);
+  }, 3000);
+});
