@@ -1,0 +1,119 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* ← 横だけ非表示にして、縦スクロールはOKに */
+}
+
+body {
+  font-family: "Yu Gothic", sans-serif;
+  text-align: center;
+  cursor: default;
+  background: linear-gradient(to bottom, #e6f0ff, #ffffff);
+  color: #000066;
+  position: relative;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p,
+li {
+  color: #000066;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+section {
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+footer {
+  width: 100%;
+  margin: 0;
+  font-size: 12px;
+  background-color: #000066;
+  color: white;
+  padding: 20px 0;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.university-img {
+  width: 600px;
+  height: 400px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.voices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.voice-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.voice-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.voice-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.voice-card p {
+  font-size: 14px;
+}
+
+.falling {
+  position: absolute;
+}
+
+#fall-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+}
