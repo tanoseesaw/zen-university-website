@@ -1,7 +1,15 @@
 const elements = document.querySelectorAll(".fall");
 
+// 3秒後に data-delay 対象を落下可能にする
+setTimeout(() => {
+  document.querySelectorAll("[data-delay]").forEach(el => {
+    el.dataset.delayReady = "true";
+  });
+}, 3000);
+
 document.addEventListener("mousemove", (e) => {
   elements.forEach((el) => {
+    if (el.dataset.delay === "true" && el.dataset.delayReady !== "true") return;
     if (!el.dataset.falling) {
       const rect = el.getBoundingClientRect();
 
@@ -70,12 +78,4 @@ function fall(el, rect) {
   requestAnimationFrame(animate);
 }
 
-window.addEventListener("load", () => {
-  const header = document.getElementById("main-header");
-  const rect = header.getBoundingClientRect();
 
-  // 3秒後に落下
-  setTimeout(() => {
-    fall(header, rect);
-  }, 3000);
-});
