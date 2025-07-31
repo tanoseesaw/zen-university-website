@@ -1,11 +1,11 @@
 const elements = document.querySelectorAll(".fall");
 
-// 3秒後に data-delay 対象を落下可能にする
+// 1秒後に data-delay 対象を落下可能にする
 setTimeout(() => {
   document.querySelectorAll("[data-delay]").forEach(el => {
     el.dataset.delayReady = "true";
   });
-}, 2000);
+}, 1000);
 
 document.addEventListener("mousemove", (e) => {
   elements.forEach((el) => {
