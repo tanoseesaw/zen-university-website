@@ -37,7 +37,6 @@ const dummy = document.createElement("div");
 dummy.style.display = "block";
 dummy.style.width = `${rect.width}px`;
 dummy.style.height = `${rect.height}px`;
-// 元の margin を取得して維持（特に下の要素との空間維持に重要）
 dummy.style.margin = window.getComputedStyle(el).margin;
 el.parentNode.insertBefore(dummy, el);
 
