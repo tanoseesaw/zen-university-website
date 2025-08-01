@@ -37,7 +37,11 @@ const dummy = document.createElement("div");
 dummy.style.display = "block";
 dummy.style.width = `${rect.width}px`;
 dummy.style.height = `${rect.height}px`;
-dummy.style.margin = window.getComputedStyle(el).margin;
+dummy.style.marginTop = window.getComputedStyle(el).marginTop;
+dummy.style.marginBottom = window.getComputedStyle(el).marginBottom;
+dummy.style.marginLeft = window.getComputedStyle(el).marginLeft;
+dummy.style.marginRight = window.getComputedStyle(el).marginRight;
+dummy.style.background = "transparent"; // 念のため透明
 el.parentNode.insertBefore(dummy, el);
 
   // 落下開始位置
