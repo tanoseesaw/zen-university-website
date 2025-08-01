@@ -48,7 +48,7 @@ function fall(el, rect) {
   const startTop = rect.top + scrollY;
   const startLeft = rect.left;
   const fallEnd = window.innerHeight - 100;
-  const fallDistance = fallEnd - rect.top;
+  const fallDistance = document.body.scrollHeight - rect.top + 100;
 
   if (fallDistance <= 0) return;
 
