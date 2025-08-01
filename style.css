@@ -85,7 +85,7 @@ ul li {
   vertical-align: middle; 
 }
 
-footer {
+footer > p {
   width: 100%;
   background-color: #000066;
   color: white;
