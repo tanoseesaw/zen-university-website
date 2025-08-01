@@ -35,11 +35,12 @@ function fall(el, rect) {
   // プレースホルダーでレイアウト保持（見た目のズレ防止）
 const dummy = document.createElement("div");
 dummy.style.display = "block";
-dummy.style.width = "0";
-dummy.style.height = "0";
-dummy.style.margin = "0";
-dummy.style.padding = "0";
-dummy.style.border = "none";
+dummy.style.width = `${rect.width}px`;
+dummy.style.height = `${rect.height}px`;
+dummy.style.marginTop = window.getComputedStyle(el).marginTop;
+dummy.style.marginBottom = window.getComputedStyle(el).marginBottom;
+dummy.style.marginLeft = window.getComputedStyle(el).marginLeft;
+dummy.style.marginRight = window.getComputedStyle(el).marginRight;
 dummy.style.background = "transparent";
 el.parentNode.insertBefore(dummy, el);
 
