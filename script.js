@@ -33,18 +33,17 @@ function fall(el, rect) {
   el.dataset.falling = "true";
 
   // プレースホルダーでレイアウト保持（見た目のズレ防止）
-const dummy = document.createElement("div");
-dummy.style.display = "block";
-dummy.style.width = `${rect.width}px`;
-dummy.style.height = `${rect.height}px`;
-dummy.style.marginTop = window.getComputedStyle(el).marginTop;
-dummy.style.marginBottom = window.getComputedStyle(el).marginBottom;
-dummy.style.marginLeft = window.getComputedStyle(el).marginLeft;
-dummy.style.marginRight = window.getComputedStyle(el).marginRight;
-dummy.style.background = "transparent"; // 念のため透明
-el.parentNode.insertBefore(dummy, el);
+  const dummy = document.createElement("div");
+  dummy.style.display = "block";
+  dummy.style.width = `${rect.width}px`;
+  dummy.style.height = `${rect.height}px`;
+  dummy.style.marginTop = window.getComputedStyle(el).marginTop;
+  dummy.style.marginBottom = window.getComputedStyle(el).marginBottom;
+  dummy.style.marginLeft = window.getComputedStyle(el).marginLeft;
+  dummy.style.marginRight = window.getComputedStyle(el).marginRight;
+  dummy.style.background = "transparent";
+  el.parentNode.insertBefore(dummy, el);
 
-  // 落下開始位置
   const scrollY = window.scrollY;
   const startTop = rect.top + scrollY;
   const startLeft = rect.left;
@@ -53,15 +52,17 @@ el.parentNode.insertBefore(dummy, el);
 
   if (fallDistance <= 0) return;
 
-  // 落下用レイヤーに追加
-  document.getElementById("fall-layer").appendChild(el);
+  // ✅ .fall-static でなければ fall-layer に移動
+  if (!el.classList.contains("fall-static")) {
+    document.getElementById("fall-layer").appendChild(el);
+    el.style.position = "absolute";
+    el.style.left = `${startLeft}px`;
+    el.style.top = `${rect.top}px`;
+    el.style.margin = "0";
+    el.style.width = `${rect.width}px`;
+    el.style.height = `${rect.height}px`;
+  }
 
-  el.style.position = "absolute";
-  el.style.left = `${startLeft}px`;
-  el.style.top = `${rect.top}px`;
-  el.style.margin = "0";
-  el.style.width = `${rect.width}px`;
-  el.style.height = `${rect.height}px`;
   el.style.transform = "none";
 
   let y = 0;
@@ -84,5 +85,4 @@ el.parentNode.insertBefore(dummy, el);
 
   requestAnimationFrame(animate);
 }
-
 
