@@ -10,11 +10,10 @@ body {
   font-family: "Yu Gothic", sans-serif;
   text-align: center;
   cursor: default;
-  background: linear-gradient(to bottom, #e6f0ff, #ffffff);
+  background: linear-gradient(to bottom, #f5f8ff, #ffffff);
   color: #000066;
   position: relative;
   min-height: 100vh;
-  padding-bottom: 80px;
 }
 
 h1,
