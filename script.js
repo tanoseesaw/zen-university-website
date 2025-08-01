@@ -47,11 +47,9 @@ el.parentNode.insertBefore(dummy, el);
   const scrollY = window.scrollY;
   const startTop = rect.top + scrollY;
   const startLeft = rect.left;
-  const footerHeight = 60;
-  const buffer = 40;
-  const fallEnd = window.innerHeight - footerHeight - buffer;
-  const fallDistance = fallEnd - rect.top;p;
-
+  const footerHeight = 60; 
+  const fallEnd = window.innerHeight - footerHeight - 10;
+  const fallDistance = fallEnd - rect.top;
   if (fallDistance <= 0) return;
 
   // ✅ .fall-static でなければ fall-layer に移動
