@@ -33,11 +33,13 @@ function fall(el, rect) {
   el.dataset.falling = "true";
 
   // プレースホルダーでレイアウト保持（見た目のズレ防止）
-  const dummy = document.createElement("span");
-  dummy.style.display = "inline-block";
-  dummy.style.width = `${rect.width}px`;
-  dummy.style.height = `${rect.height}px`;
-  el.parentNode.insertBefore(dummy, el);
+const dummy = document.createElement("div");
+dummy.style.display = "block";
+dummy.style.width = `${rect.width}px`;
+dummy.style.height = `${rect.height}px`;
+// 元の margin を取得して維持（特に下の要素との空間維持に重要）
+dummy.style.margin = window.getComputedStyle(el).margin;
+el.parentNode.insertBefore(dummy, el);
 
   // 落下開始位置
   const scrollY = window.scrollY;
