@@ -207,3 +207,34 @@ footer {
   font-size: 13px;
   color: #333;
 }
+
+.chatbot-form {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chatbot-form input,
+.chatbot-form textarea {
+  width: 100%;
+  padding: 6px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.chatbot-form button {
+  background-color: #000066;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.chatbot-form button:hover {
+  background-color: #333399;
+}
