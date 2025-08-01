@@ -178,3 +178,32 @@ footer {
   pointer-events: none;
   z-index: 999;
 }
+
+.chatbot-mock {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 220px;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'Zen Maru Gothic', sans-serif;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.chatbot-header {
+  background-color: #000066;
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.chatbot-body {
+  padding: 12px;
+  font-size: 13px;
+  color: #333;
+}
