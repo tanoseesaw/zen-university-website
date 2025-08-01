@@ -47,7 +47,7 @@ el.parentNode.insertBefore(dummy, el);
   const startTop = rect.top + scrollY;
   const startLeft = rect.left;
   const fallEnd = window.innerHeight - 100;
-  const fallDistance = document.body.scrollHeight - rect.top + 100;
+  const fallDistance = window.innerHeight; 
 
   if (fallDistance <= 0) return;
 
